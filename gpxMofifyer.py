@@ -75,11 +75,11 @@ def gpxFileEnd(file):
 
 
 
-newGPX = open('out.gpx','w')
-writeHeaderOfFile('9.gpx',newGPX)
+newGPX = open('out.'+sys.argv[1],'w')
+writeHeaderOfFile(sys.argv[1],newGPX)
 
 
-trackPoints = getTrackpointsOfGPXFile('9.gpx')
+trackPoints = getTrackpointsOfGPXFile(sys.argv[1])
 trackPoints = trackPoints
 
 
@@ -129,7 +129,6 @@ for ID in range(1, len(trackPoints)):
 	newGPX.write('        <ele>' + trackPoints[ID]['ele'] + '</ele>\n')
 	newGPX.write('        <time>' + trackPoints[ID]['time'] + '</time>\n')
 	newGPX.write('      </trkpt>\n')
-
 
 gpxFileEnd(newGPX)
 newGPX.flush()
