@@ -76,10 +76,10 @@ def gpxFileEnd(file):
 
 
 newGPX = open('out.gpx','w')
-writeHeaderOfFile('9.gpx',newGPX)
+writeHeaderOfFile(sys.argv[1],newGPX)
 
 
-trackPoints = getTrackpointsOfGPXFile('9.gpx')
+trackPoints = getTrackpointsOfGPXFile(sys.argv[1])
 trackPoints = trackPoints
 
 
