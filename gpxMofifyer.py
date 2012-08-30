@@ -75,7 +75,11 @@ def gpxFileEnd(file):
 
 
 
+<<<<<<< HEAD
 newGPX = open('out.'+sys.argv[1],'w')
+=======
+newGPX = open('out.gpx','w')
+>>>>>>> 08ab66ca2d85e4a02edb7d132cffe35f8627e031
 writeHeaderOfFile(sys.argv[1],newGPX)
 
 
